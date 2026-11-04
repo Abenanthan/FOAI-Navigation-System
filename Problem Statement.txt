@@ -1,0 +1,13 @@
+Problem Statement
+
+Urban traffic congestion has become a significant challenge due to the rapid increase in the
+number of vehicles. Drivers often experience delays because of traffic signals, road
+construction, accidents and peak-hour congestion. Conventional navigation systems generally
+recommend the shortest geographical distance but may not always provide the fastest travel
+route considering current traffic conditions. The objective of this project is to develop an AI-
+based Smart Traffic Navigation System that recommends the optimal driving route by
+considering both travel distance and estimated traffic conditions. The road network is
+represented as a weighted graph where intersections are nodes and roads are weighted edges
+representing travel time or congestion level. The intelligent agent analyzes multiple possible
+routes and selects the most efficient one. The project demonstrates how heuristic search
+algorithms improve decision-making in transportation systems.

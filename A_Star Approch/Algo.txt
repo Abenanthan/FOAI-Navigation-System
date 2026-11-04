@@ -1,0 +1,29 @@
+Create an empty Priority Queue to store nodes to be explored, which automatically sorts items so the lowest total cost is always evaluated first.
+
+Create an empty Set to keep track of nodes that have already been fully explored.
+
+Add the start node to the priority queue with an actual cost of 0, a total estimated cost equal to its heuristic value, and a starting path containing just itself.
+
+Begin a continuous loop that runs as long as the priority queue is not empty.
+
+Remove and select the node with the lowest total estimated cost from the priority queue, retrieving its actual cost and the path taken to reach it.
+
+Check if this selected node is the target goal node; if it is, stop the algorithm entirely and return the path and cost as the optimal route has been found.
+
+Check if the selected node is already in the fully explored set; if it is, skip all remaining steps for this node and start the loop over with the next lowest-cost node in the queue.
+
+Add the currently selected node to the fully explored set so it is never processed again.
+
+Loop through every neighboring node directly connected to the currently selected node.
+
+Skip any neighbor that is already present in the fully explored set.
+
+Calculate the new actual cost to reach each valid neighbor by adding the actual cost of the current node to the travel cost of the edge connecting them.
+
+Calculate the new total estimated cost for the neighbor by adding this new actual cost to the neighbor's specific heuristic value.
+
+Add the neighbor into the priority queue along with its new total estimated cost, its new actual cost, and a newly updated path that includes this neighbor.
+
+Repeat the loop from step 4 until the goal is found.
+
+If the loop ends because the priority queue becomes completely empty and the goal was never reached, stop the algorithm and declare that the goal could not be found

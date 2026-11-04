@@ -10,11 +10,13 @@ def astar(graph, start, goal, heuristic):
         return "Goal node not found", None, [], []
     
     pq = []
+    #heapq.heappush(queue, (f(n), g(n), node, path))
     heapq.heappush(pq, (heuristic[start], 0, start, [start]))
 
     visited = set()
     step = 0
-
+    #Counts how many nodees have been removed
+    
     while pq:
         f, cost, node, path = heapq.heappop(pq)
         step += 1
@@ -50,3 +52,4 @@ def astar(graph, start, goal, heuristic):
                     )
 
     return "Goal Not Found", None, [], list(visited)
+    #returns the status, cost, path, and visited nodes
